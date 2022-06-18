@@ -208,6 +208,7 @@ spring:
     url: <%- getJDBCUrl(devDatabaseType, { databaseName: 'xe', hostname: 'localhost' }) %>
   <%_ } else if (devDatabaseTypeH2Disk) { _%>
     url: <%- getJDBCUrl(devDatabaseType, { prodDatabaseType, databaseName: lowercaseBaseName, localDirectory: `./${BUILD_DIR}h2db/db` }) %>
+    databaseClass: liquibase.database.core.MariaDBDatabase
   <%_ } else if (devDatabaseTypeH2Memory) { _%>
     url: <%- getJDBCUrl(devDatabaseType, { prodDatabaseType, databaseName: lowercaseBaseName }) %>
   <%_ } _%>
