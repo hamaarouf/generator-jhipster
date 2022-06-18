@@ -203,7 +203,7 @@ spring:
 <%_ } _%>
 <%_ if (reactive) { _%>
   <%_ if (devDatabaseTypeMysql || devDatabaseTypeMariadb || devDatabaseTypePostgres || devDatabaseTypeMssql) { _%>
-    url: <%- getJDBCUrl(devDatabaseType, { databaseName: baseName, hostname: 'localhost' }) %>
+    url: <%- getJDBCUrl(devDatabaseType, { prodDatabaseType, databaseName: baseName, hostname: 'localhost' }) %>
   <%_ } else if (devDatabaseTypeOracle) { _%>
     url: <%- getJDBCUrl(devDatabaseType, { databaseName: 'xe', hostname: 'localhost' }) %>
   <%_ } else if (devDatabaseTypeH2Disk) { _%>
