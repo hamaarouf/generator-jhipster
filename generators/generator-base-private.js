@@ -1224,7 +1224,7 @@ module.exports = class JHipsterBasePrivateGenerator extends Generator {
     if (options.itests && H2_MEMORY === databaseType) {
       port = ':12344';
     }
-    if (H2_MEMORY === databaseType || H2_DISK === databaseType) {
+    if (prodDatabaseType && (H2_MEMORY === databaseType || H2_DISK === databaseType)) {
       extraOptions = `${extraOptions};MODE=${prodDatabaseType}`;
     }
     let url = `${protocol}:${protocolSuffix}`;
