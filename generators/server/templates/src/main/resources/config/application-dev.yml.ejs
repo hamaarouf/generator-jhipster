@@ -211,6 +211,7 @@ spring:
     databaseClass: liquibase.database.core.MariaDBDatabase
   <%_ } else if (devDatabaseTypeH2Memory) { _%>
     url: <%- getJDBCUrl(devDatabaseType, { prodDatabaseType, databaseName: lowercaseBaseName }) %>
+    databaseClass: liquibase.database.core.MariaDBDatabase
   <%_ } _%>
 <%_ } _%>
 <%_ if (!skipUserManagement) { _%>
