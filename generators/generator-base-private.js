@@ -1215,8 +1215,8 @@ module.exports = class JHipsterBasePrivateGenerator extends Generator {
         ...databaseDataForType[protocol],
       };
     }
-    const { protocolSuffix = '', extraOptions = '', useDirectory = false } = databaseDataForType;
-    let { port = '' } = databaseDataForType;
+    const { protocolSuffix = '', useDirectory = false } = databaseDataForType;
+    let { extraOptions = '', port = '' } = databaseDataForType;
     if (useDirectory && !options.localDirectory) {
       throw new Error(`'localDirectory' option should be provided for ${databaseType} databaseType`);
     }
